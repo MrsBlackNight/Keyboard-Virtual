@@ -4,102 +4,122 @@
 
 <div class="auth">
   <div class="auth__input">
-    <input
-      appOskInput
-      type="text"
-      maxlength="1"
-      #txt1
-      (keyup)="move($event, '', txt1, txt2)"
-      class="input input__one"
-    />
-    <input
-      appOskInput
-      type="text"
-      maxlength="1"
-      #txt2
-      (keyup)="move($event, txt1, txt2, txt3)"
-      class="input input__two"
-    />
-    <input
-      appOskInput
-      type="text"
-      maxlength="1"
-      #txt3
-      (keyup)="move($event, txt2, txt3, txt4)"
-      class="input input__three"
-    />
-    <input
-      appOskInput
-      type="text"
-      maxlength="1"
-      #txt4
-      (keyup)="move($event, txt3, txt4, txt5)"
-      class="input input__fourth"
-    />
-    <input
-      appOskInput
-      type="text"
-      maxlength="1"
-      #txt5
-      (keyup)="move($event, txt4, txt5, txt6)"
-      class="input input__fourth"
-    />
-    <input
-      appOskInput
-      type="text"
-      maxlength="1"
-      #txt6
-      (keyup)="move($event, txt5, txt6, txt7)"
-      class="input input__fourth"
-    />
-    <input
-      appOskInput
-      type="text"
-      maxlength="1"
-      #txt7
-      (keyup)="move($event, txt6, txt7, txt8)"
-      class="input input__fourth"
-    />
-    <input
-      appOskInput
-      type="text"
-      maxlength="1"
-      #txt8
-      (keyup)="move($event, txt7, txt8, txt9)"
-      class="input input__fourth"
-    />
-    <input
-      appOskInput
-      type="text"
-      maxlength="1"
-      #txt9
-      (keyup)="move($event, txt8, txt9, txt10)"
-      class="input input__fourth"
-    />
-    <input
-      appOskInput
-      type="text"
-      maxlength="1"
-      #txt10
-      (keyup)="move($event, txt9, txt10, txt11)"
-      class="input input__fourth"
-    />
-    <input
-      appOskInput
-      type="text"
-      maxlength="1"
-      #txt11
-      (keyup)="move($event, txt10, txt11, txt12)"
-      class="input input__fourth"
-    />
-    <input
-      appOskInput
-      type="text"
-      maxlength="1"
-      #txt12
-      (keyup)="move($event, txt11, txt12, '')"
-      class="input input__fourth"
-    />
+    <div class="line_1">
+      <input
+        appOskInput
+        type="text"
+        maxlength="1"
+        #txt1
+        oninput="if(value.length>1) value=value.slice(0,1)"
+        onKeyPress="if(this.value.length==1) return false;"
+        (keyup)="move($event, '', txt1, txt2)"
+        (focusout)="getInputValue($event)"
+        class="input input__one"
+      />
+      <input
+        appOskInput
+        type="text"
+        maxlength="1"
+        #txt2
+        (keyup)="move($event, txt1, txt2, txt3)"
+        (focusout)="getInputValue($event)"
+        class="input input__two"
+      />
+      <input
+        appOskInput
+        type="text"
+        maxlength="1"
+        #txt3
+        (keyup)="move($event, txt2, txt3, txt4)"
+        (focusout)="getInputValue($event)"
+        class="input input__three"
+      />
+      <input
+        appOskInput
+        type="text"
+        maxlength="1"
+        #txt4
+        (keyup)="move($event, txt3, txt4, txt5)"
+        (focusout)="getInputValue($event)"
+        class="input input__fourth"
+      />
+      <input
+        appOskInput
+        type="text"
+        maxlength="1"
+        #txt5
+        (keyup)="move($event, txt4, txt5, txt6)"
+        (focusout)="getInputValue($event)"
+        class="input input__fourth"
+      />
+      <input
+        appOskInput
+        type="text"
+        maxlength="1"
+        #txt6
+        (keyup)="move($event, txt5, txt6, txt7)"
+        (focusout)="getInputValue($event)"
+        class="input input__fourth"
+      />
+    </div>
+  </div>
+  <div class="auth__input">
+    <div class="line_2">
+      <input
+        appOskInput
+        type="text"
+        maxlength="1"
+        #txt7
+        (keyup)="move($event, txt6, txt7, txt8)"
+        (focusout)="getInputValue($event)"
+        class="input input__fourth"
+      />
+      <input
+        appOskInput
+        type="text"
+        maxlength="1"
+        #txt8
+        (keyup)="move($event, txt7, txt8, txt9)"
+        (focusout)="getInputValue($event)"
+        class="input input__fourth"
+      />
+      <input
+        appOskInput
+        type="text"
+        maxlength="1"
+        #txt9
+        (keyup)="move($event, txt8, txt9, txt10)"
+        (focusout)="getInputValue($event)"
+        class="input input__fourth"
+      />
+      <input
+        appOskInput
+        type="text"
+        maxlength="1"
+        #txt10
+        (keyup)="move($event, txt9, txt10, txt11)"
+        (focusout)="getInputValue($event)"
+        class="input input__fourth"
+      />
+      <input
+        appOskInput
+        type="text"
+        maxlength="1"
+        #txt11
+        (keyup)="move($event, txt10, txt11, txt12)"
+        (focusout)="getInputValue($event)"
+        class="input input__fourth"
+      />
+      <input
+        appOskInput
+        type="text"
+        maxlength="1"
+        #txt12
+        (keyup)="move($event, txt11, txt12, '')"
+        (focusout)="getInputValue($event)"
+        class="input input__fourth"
+      />
+    </div>
   </div>
 </div>
 
