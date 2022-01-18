@@ -12,10 +12,22 @@ p {
   border-radius: 4px;
   padding: 10px;
 }
+.line_1{
+  margin-top: 10px;
+  width: 80%;
+  display:block;
+  margin-left: 10%;
+}
+.line_2{
+  width: 80%;
+  display:block;
+  margin-left: 10%;
+}
 
 .container {
   width: 100%;
 }
+/*
 .auth {
   width: 100%;
   margin: 0 auto;
@@ -24,6 +36,27 @@ p {
     display: flex;
     justify-content: space-between;
   }
+}
+*/
+.auth__input {
+  &__input {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+.input {
+  width: 12%;
+  border: 1px solid gray;
+  border-radius: 6px;
+  outline: none;
+  padding: 4px 6px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;  
+  margin:3px 3px;
+  text-transform: uppercase;
+}
 }
 .input {
   width: 20%;
